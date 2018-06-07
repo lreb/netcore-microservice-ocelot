@@ -1,0 +1,11 @@
+/home/luis-espinoza/Projects/personal/microservices/Gateway/bin/Debug/netcoreapp2.0/Gateway.deps.json
+/home/luis-espinoza/Projects/personal/microservices/Gateway/bin/Debug/netcoreapp2.0/Gateway.runtimeconfig.json
+/home/luis-espinoza/Projects/personal/microservices/Gateway/bin/Debug/netcoreapp2.0/Gateway.runtimeconfig.dev.json
+/home/luis-espinoza/Projects/personal/microservices/Gateway/bin/Debug/netcoreapp2.0/Gateway.dll
+/home/luis-espinoza/Projects/personal/microservices/Gateway/bin/Debug/netcoreapp2.0/Gateway.pdb
+/home/luis-espinoza/Projects/personal/microservices/Gateway/obj/Debug/netcoreapp2.0/Gateway.csproj.CoreCompileInputs.cache
+/home/luis-espinoza/Projects/personal/microservices/Gateway/obj/Debug/netcoreapp2.0/Gateway.AssemblyInfoInputs.cache
+/home/luis-espinoza/Projects/personal/microservices/Gateway/obj/Debug/netcoreapp2.0/Gateway.AssemblyInfo.cs
+/home/luis-espinoza/Projects/personal/microservices/Gateway/obj/Debug/netcoreapp2.0/Gateway.dll
+/home/luis-espinoza/Projects/personal/microservices/Gateway/obj/Debug/netcoreapp2.0/Gateway.pdb
+/home/luis-espinoza/Projects/personal/microservices/Gateway/obj/Debug/netcoreapp2.0/Gateway.csprojResolveAssemblyReference.cache

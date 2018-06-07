@@ -1,0 +1,10 @@
+/home/luis-espinoza/Projects/personal/microservices/ServiceB/bin/Debug/netcoreapp2.0/ServiceB.deps.json
+/home/luis-espinoza/Projects/personal/microservices/ServiceB/bin/Debug/netcoreapp2.0/ServiceB.runtimeconfig.json
+/home/luis-espinoza/Projects/personal/microservices/ServiceB/bin/Debug/netcoreapp2.0/ServiceB.runtimeconfig.dev.json
+/home/luis-espinoza/Projects/personal/microservices/ServiceB/bin/Debug/netcoreapp2.0/ServiceB.dll
+/home/luis-espinoza/Projects/personal/microservices/ServiceB/bin/Debug/netcoreapp2.0/ServiceB.pdb
+/home/luis-espinoza/Projects/personal/microservices/ServiceB/obj/Debug/netcoreapp2.0/ServiceB.csproj.CoreCompileInputs.cache
+/home/luis-espinoza/Projects/personal/microservices/ServiceB/obj/Debug/netcoreapp2.0/ServiceB.AssemblyInfoInputs.cache
+/home/luis-espinoza/Projects/personal/microservices/ServiceB/obj/Debug/netcoreapp2.0/ServiceB.AssemblyInfo.cs
+/home/luis-espinoza/Projects/personal/microservices/ServiceB/obj/Debug/netcoreapp2.0/ServiceB.dll
+/home/luis-espinoza/Projects/personal/microservices/ServiceB/obj/Debug/netcoreapp2.0/ServiceB.pdb
