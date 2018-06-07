@@ -12,6 +12,8 @@ using Ocelot.DependencyInjection;
 using CacheManager.Core;
 using Ocelot.Middleware;
 using ConfigurationBuilder = Microsoft.Extensions.Configuration.ConfigurationBuilder;
+using NLog.Extensions.Logging;
+using NLog.Web;
 
 namespace Gateway
 {
@@ -42,18 +44,22 @@ namespace Gateway
                         })
                         .WithDictionaryHandle();
                     });
+                              
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public async void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            // if (env.IsDevelopment())
-            // {
-            //     app.UseDeveloperExceptionPage();
-            // }
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
 
             // app.UseMvc();
-            loggerFactory.AddConsole(Configuration.GetSection("Logging"));
+            loggerFactory.AddConsole(Configuration.GetSection("Logging"))
+            .AddNLog();
+            
+            NLog.LogManager.LoadConfiguration("../../../nlog.config");
             app.UseOcelot().Wait();
         }
     }

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "95266deea51b755e9808e41fcf0bca1eac134371"
+    "signature": "61f1b96b22d4ef324239cf04f22348b01b7220c6"
   },
   "compilationOptions": {
     "defines": [
@@ -25,6 +25,8 @@
         "dependencies": {
           "Microsoft.AspNetCore.All": "2.0.0",
           "Microsoft.NETCore.App": "2.0.0",
+          "NLog": "4.5.4",
+          "NLog.Web.AspNetCore": "4.5.4",
           "Ocelot": "7.0.4"
         },
         "runtime": {
@@ -2617,6 +2619,41 @@
         },
         "compile": {
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
+        }
+      },
+      "NLog/4.5.4": {
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {}
+        },
+        "compile": {
+          "lib/netstandard2.0/NLog.dll": {}
+        }
+      },
+      "NLog.Extensions.Logging/1.0.2": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "2.0.2",
+          "NLog": "4.5.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.Extensions.Logging.dll": {}
+        },
+        "compile": {
+          "lib/netstandard2.0/NLog.Extensions.Logging.dll": {}
+        }
+      },
+      "NLog.Web.AspNetCore/4.5.4": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.0.3",
+          "Microsoft.AspNetCore.Http": "2.0.3",
+          "Microsoft.AspNetCore.Http.Extensions": "2.0.3",
+          "Microsoft.AspNetCore.Routing.Abstractions": "2.0.3",
+          "NLog.Extensions.Logging": "1.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.Web.AspNetCore.dll": {}
+        },
+        "compile": {
+          "lib/netstandard2.0/NLog.Web.AspNetCore.dll": {}
         }
       },
       "Ocelot/7.0.4": {
@@ -5662,6 +5699,27 @@
       "sha512": "sha512-5PYT/IqQ+UK31AmZiSS102R6EsTo+LGTSI8bp7WAUqDKaF4wHXD8U9u4WxTI1vc64tYi++8p3dk3WWNqPFgldw==",
       "path": "newtonsoft.json.bson/1.0.1",
       "hashPath": "newtonsoft.json.bson.1.0.1.nupkg.sha512"
+    },
+    "NLog/4.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sYOzep0pdVat2zkOREy6FQwcH4zRCTimGr4c1Esqc0+t9QYvQ5JXDnW/sdqOsVxbxJ28sa/3MRUGSAfXz7eIGw==",
+      "path": "nlog/4.5.4",
+      "hashPath": "nlog.4.5.4.nupkg.sha512"
+    },
+    "NLog.Extensions.Logging/1.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-i5iGN3TUEGtRMO1m0xjDwFugVZz4FITJ/JNMyC4HtzBLipUJSApXiTaCR8fWkTkkyqb5fYkvgLMV4XBmwxxEqQ==",
+      "path": "nlog.extensions.logging/1.0.2",
+      "hashPath": "nlog.extensions.logging.1.0.2.nupkg.sha512"
+    },
+    "NLog.Web.AspNetCore/4.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dTCjiiUAccDD2XRTg3L74bamYmjFozaA/mXEeV08bOZ0bIez1jM0pXfQTb2awFsiibrgDuCf3JJQ/xf2OJB4fA==",
+      "path": "nlog.web.aspnetcore/4.5.4",
+      "hashPath": "nlog.web.aspnetcore.4.5.4.nupkg.sha512"
     },
     "Ocelot/7.0.4": {
       "type": "package",

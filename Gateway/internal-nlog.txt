@@ -1,0 +1,7 @@
+2018-06-07 15:22:36.5942 Error Parsing configuration from /home/luis-espinoza/Projects/personal/microservices/Gateway/bin/Debug/netcoreapp2.0/../../../nlog.config failed. Exception: NLog.NLogConfigurationException: Exception when parsing /home/luis-espinoza/Projects/personal/microservices/Gateway/bin/Debug/netcoreapp2.0/../../../nlog.config.  ---> NLog.NLogConfigurationException: Target console not found.
+   at NLog.Config.XmlLoggingConfiguration.ParseLoggerElement(NLogXmlElement loggerElement, IList`1 rulesCollection)
+   at NLog.Config.XmlLoggingConfiguration.ParseRulesElement(NLogXmlElement rulesElement, IList`1 rulesCollection)
+   at NLog.Config.XmlLoggingConfiguration.ParseNLogElement(NLogXmlElement nlogElement, String filePath, Boolean autoReloadDefault)
+   at NLog.Config.XmlLoggingConfiguration.Initialize(XmlReader reader, String fileName, Boolean ignoreErrors)
+   --- End of inner exception stack trace ---
+2018-06-07 15:22:36.5990 Warn Failed loading config from /home/luis-espinoza/Projects/personal/microservices/Gateway/bin/Debug/netcoreapp2.0/../../../nlog.config. Invalid XML?
