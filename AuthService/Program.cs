@@ -14,7 +14,16 @@ namespace AuthService
     {
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+            //BuildWebHost(args).Run();
+            var host = new WebHostBuilder()
+            .UseKestrel()
+            .UseContentRoot(Directory.GetCurrentDirectory())
+            .UseIISIntegration()
+            .UseStartup<Startup>()
+            .UseUrls("http://localhost:5003/")
+            .Build();
+
+            host.Run();
         }
 
         public static IWebHost BuildWebHost(string[] args) =>

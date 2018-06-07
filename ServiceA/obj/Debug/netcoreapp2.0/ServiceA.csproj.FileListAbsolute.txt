@@ -8,3 +8,4 @@
 /home/luis-espinoza/Projects/personal/microservices/ServiceA/obj/Debug/netcoreapp2.0/ServiceA.AssemblyInfo.cs
 /home/luis-espinoza/Projects/personal/microservices/ServiceA/obj/Debug/netcoreapp2.0/ServiceA.dll
 /home/luis-espinoza/Projects/personal/microservices/ServiceA/obj/Debug/netcoreapp2.0/ServiceA.pdb
+/home/luis-espinoza/Projects/personal/microservices/ServiceA/obj/Debug/netcoreapp2.0/ServiceA.csprojResolveAssemblyReference.cache

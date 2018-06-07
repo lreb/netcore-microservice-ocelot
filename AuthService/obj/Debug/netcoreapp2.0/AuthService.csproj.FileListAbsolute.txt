@@ -1,0 +1,10 @@
+/home/luis-espinoza/Projects/personal/microservices/AuthService/obj/Debug/netcoreapp2.0/AuthService.csproj.CoreCompileInputs.cache
+/home/luis-espinoza/Projects/personal/microservices/AuthService/obj/Debug/netcoreapp2.0/AuthService.AssemblyInfoInputs.cache
+/home/luis-espinoza/Projects/personal/microservices/AuthService/obj/Debug/netcoreapp2.0/AuthService.AssemblyInfo.cs
+/home/luis-espinoza/Projects/personal/microservices/AuthService/bin/Debug/netcoreapp2.0/AuthService.deps.json
+/home/luis-espinoza/Projects/personal/microservices/AuthService/bin/Debug/netcoreapp2.0/AuthService.runtimeconfig.json
+/home/luis-espinoza/Projects/personal/microservices/AuthService/bin/Debug/netcoreapp2.0/AuthService.runtimeconfig.dev.json
+/home/luis-espinoza/Projects/personal/microservices/AuthService/bin/Debug/netcoreapp2.0/AuthService.dll
+/home/luis-espinoza/Projects/personal/microservices/AuthService/bin/Debug/netcoreapp2.0/AuthService.pdb
+/home/luis-espinoza/Projects/personal/microservices/AuthService/obj/Debug/netcoreapp2.0/AuthService.dll
+/home/luis-espinoza/Projects/personal/microservices/AuthService/obj/Debug/netcoreapp2.0/AuthService.pdb
