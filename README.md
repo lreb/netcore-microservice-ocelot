@@ -17,7 +17,9 @@ https://www.c-sharpcorner.com/article/building-api-gateway-using-ocelot-in-asp-n
 
 ### JWT
 
+https://jwt.io/
 https://auth0.com/blog/securing-asp-dot-net-core-2-applications-with-jwts/
+https://goblincoding.com/2016/07/03/issuing-and-authenticating-jwt-tokens-in-asp-net-core-webapi-part-i/
 
 ## packages
 

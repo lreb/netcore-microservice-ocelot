@@ -40,6 +40,7 @@ namespace AuthService
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]))
                 };
             });
+
             services.AddMvc();
         }
 
