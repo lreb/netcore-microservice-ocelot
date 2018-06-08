@@ -119,14 +119,75 @@
       "Priority": 1,
       "Timeout": 0,
       "DangerousAcceptAnyServerCertificateValidator": false
+    },
+    {
+      "DownstreamPathTemplate": "/api/token",
+      "UpstreamPathTemplate": "/token",
+      "UpstreamHttpMethod": [
+        "Get",
+        "Post"
+      ],
+      "AddHeadersToRequest": {},
+      "UpstreamHeaderTransform": {},
+      "DownstreamHeaderTransform": {},
+      "AddClaimsToRequest": {},
+      "RouteClaimsRequirement": {},
+      "AddQueriesToRequest": {},
+      "RequestIdKey": null,
+      "FileCacheOptions": {
+        "TtlSeconds": 0,
+        "Region": null
+      },
+      "ReRouteIsCaseSensitive": false,
+      "ServiceName": null,
+      "DownstreamScheme": "http",
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 0,
+        "DurationOfBreak": 0,
+        "TimeoutValue": 0
+      },
+      "LoadBalancerOptions": {
+        "Type": null,
+        "Key": null,
+        "Expiry": 0
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": false,
+        "Period": null,
+        "PeriodTimespan": 0.0,
+        "Limit": 0
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowedScopes": []
+      },
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": false,
+        "UseCookieContainer": false,
+        "UseTracing": false
+      },
+      "UseServiceDiscovery": false,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51876
+        }
+      ],
+      "UpstreamHost": null,
+      "Key": null,
+      "DelegatingHandlers": [],
+      "Priority": 1,
+      "Timeout": 0,
+      "DangerousAcceptAnyServerCertificateValidator": false
     }
   ],
   "Aggregates": [],
   "GlobalConfiguration": {
-    "RequestIdKey": null,
+    "RequestIdKey": "OcRequestId",
     "ServiceDiscoveryProvider": {
-      "Host": "localhost",
-      "Port": 5000,
+      "Host": null,
+      "Port": 0,
       "Type": null,
       "Token": null,
       "ConfigurationKey": null
@@ -143,7 +204,7 @@
       "DurationOfBreak": 0,
       "TimeoutValue": 0
     },
-    "BaseUrl": "http://localhost:5000",
+    "BaseUrl": null,
     "LoadBalancerOptions": {
       "Type": null,
       "Key": null,

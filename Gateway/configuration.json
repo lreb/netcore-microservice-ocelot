@@ -21,13 +21,27 @@
       ],
       "UpstreamPathTemplate": "/serviceb/",
       "UpstreamHttpMethod": [ "Get" ]
-    }
+    },
+    {
+      "DownstreamHostAndPorts": [
+          {
+              "Host": "localhost",
+              "Port": 51876
+          }
+      ],
+      "DownstreamPathTemplate": "/api/token",
+      "UpstreamPathTemplate": "/token",
+      "UpstreamHttpMethod": ["Get","Post"],
+      "ReRouteIsCaseSensitive": false,
+      "DownstreamScheme": "http",
+      "AuthenticationOptions": {
+          "AuthenticationProviderKey": "TestKey",
+          "AllowedScopes": []
+          }
+      }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:5000",
-    "ServiceDiscoveryProvider": {
-      "Host": "localhost",
-      "Port": 5000
-    }
+    "RequestIdKey": "OcRequestId",  
+    "AdministrationPath": "/administration"
   }
 }

@@ -1,0 +1,958 @@
+2018-06-08 10:22:07.7364||FATAL|Microsoft.AspNetCore.Hosting.Internal.WebHost|Application startup exception One or more errors occurred. (Unable to start Ocelot, errors are: AuthenticationProviderKey:TestKey,AllowedScopes:[] is unsupported authentication provider)
+2018-06-08 10:22:52.8259||FATAL|Microsoft.AspNetCore.Hosting.Internal.WebHost|Application startup exception One or more errors occurred. (Unable to start Ocelot, errors are: AuthenticationProviderKey:TestKey,AllowedScopes:[] is unsupported authentication provider)
+2018-06-08 10:24:20.9717||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/servicea   
+2018-06-08 10:24:21.1271||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDBH52L49M:00000001, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/values 
+2018-06-08 10:24:21.1383||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDBH52L49M:00000001, previousRequestId: no previous request id, message: No authentication needed for /servicea 
+2018-06-08 10:24:21.1462||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDBH52L49M:00000001, previousRequestId: no previous request id, message: /api/values route does not require user to be authorised 
+2018-06-08 10:24:21.3312||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 373.7823ms 200 application/json; charset=utf-8 
+2018-06-08 10:24:24.5486||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/serviceb   
+2018-06-08 10:24:24.5494||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDBH52L49M:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/values 
+2018-06-08 10:24:24.5494||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDBH52L49M:00000002, previousRequestId: no previous request id, message: No authentication needed for /serviceb 
+2018-06-08 10:24:24.5494||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDBH52L49M:00000002, previousRequestId: no previous request id, message: /api/values route does not require user to be authorised 
+2018-06-08 10:24:24.5598||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 11.1138ms 200 application/json; charset=utf-8 
+2018-06-08 10:24:27.9788||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/servicea   
+2018-06-08 10:24:27.9788||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDBH52L49M:00000003, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/values 
+2018-06-08 10:24:27.9788||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDBH52L49M:00000003, previousRequestId: no previous request id, message: No authentication needed for /servicea 
+2018-06-08 10:24:27.9788||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDBH52L49M:00000003, previousRequestId: no previous request id, message: /api/values route does not require user to be authorised 
+2018-06-08 10:24:27.9893||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 10.4568ms 200 application/json; charset=utf-8 
+2018-06-08 10:24:30.0770||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/serviceb   
+2018-06-08 10:24:30.0770||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDBH52L49M:00000004, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/values 
+2018-06-08 10:24:30.0770||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDBH52L49M:00000004, previousRequestId: no previous request id, message: No authentication needed for /serviceb 
+2018-06-08 10:24:30.0770||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDBH52L49M:00000004, previousRequestId: no previous request id, message: /api/values route does not require user to be authorised 
+2018-06-08 10:24:30.0821||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 5.0543ms 200 application/json; charset=utf-8 
+2018-06-08 10:39:20.0294||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 10:39:20.2062||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDBPH0N8R6:00000001, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 10:39:20.2170||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDBPH0N8R6:00000001, previousRequestId: no previous request id, message: /token is an authenticated route. AuthenticationMiddleware checking if client is authenticated 
+2018-06-08 10:39:20.2595||ERROR|Ocelot.Errors.Middleware.ExceptionHandlerMiddleware|requestId: 0HLEDBPH0N8R6:00000001, previousRequestId: no previous request id, message: Exception caught in global error handler, exception message: The MetadataAddress or Authority must use HTTPS unless disabled for development by setting RequireHttpsMetadata=false., exception stack:    at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerPostConfigureOptions.PostConfigure(String name, JwtBearerOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.<InitializeAsync>d__42.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.<GetHandlerAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.<AuthenticateAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Authentication.Middleware.AuthenticationMiddleware.<Invoke>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.RequestId.Middleware.ReRouteRequestIdMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Request.Middleware.DownstreamRequestInitialiserMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Headers.Middleware.HttpHeadersTransformationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Multiplexer.Multiplexer.<Fire>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Multiplexer.Multiplexer.<Multiplex>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware.<Invoke>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Responder.Middleware.ResponderMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Pipeline.MapWhenMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Errors.Middleware.ExceptionHandlerMiddleware.<Invoke>d__4.MoveNext() RequestId: 0HLEDBPH0N8R6:00000001, exception: System.InvalidOperationException: The MetadataAddress or Authority must use HTTPS unless disabled for development by setting RequireHttpsMetadata=false.
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerPostConfigureOptions.PostConfigure(String name, JwtBearerOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.<InitializeAsync>d__42.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.<GetHandlerAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.<AuthenticateAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Authentication.Middleware.AuthenticationMiddleware.<Invoke>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.RequestId.Middleware.ReRouteRequestIdMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Request.Middleware.DownstreamRequestInitialiserMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Headers.Middleware.HttpHeadersTransformationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Multiplexer.Multiplexer.<Fire>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Multiplexer.Multiplexer.<Multiplex>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware.<Invoke>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Responder.Middleware.ResponderMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Pipeline.MapWhenMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Errors.Middleware.ExceptionHandlerMiddleware.<Invoke>d__4.MoveNext() 
+2018-06-08 10:39:20.3131||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 292.9132ms 500  
+2018-06-08 10:39:35.6240||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/serviceb   
+2018-06-08 10:39:35.6251||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDBPH0N8R6:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/values 
+2018-06-08 10:39:35.6251||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDBPH0N8R6:00000002, previousRequestId: no previous request id, message: No authentication needed for /serviceb 
+2018-06-08 10:39:35.6384||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDBPH0N8R6:00000002, previousRequestId: no previous request id, message: /api/values route does not require user to be authorised 
+2018-06-08 10:39:35.7853||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 161.2256ms 200 application/json; charset=utf-8 
+2018-06-08 10:39:41.0084||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/servicea   
+2018-06-08 10:39:41.0084||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDBPH0N8R6:00000003, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/values 
+2018-06-08 10:39:41.0090||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDBPH0N8R6:00000003, previousRequestId: no previous request id, message: No authentication needed for /servicea 
+2018-06-08 10:39:41.0090||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDBPH0N8R6:00000003, previousRequestId: no previous request id, message: /api/values route does not require user to be authorised 
+2018-06-08 10:39:41.0151||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 6.6627ms 200 application/json; charset=utf-8 
+2018-06-08 10:40:45.0638||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 10:40:45.0638||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDBPH0N8R6:00000004, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 10:40:45.0638||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDBPH0N8R6:00000004, previousRequestId: no previous request id, message: /token is an authenticated route. AuthenticationMiddleware checking if client is authenticated 
+2018-06-08 10:40:45.0753||ERROR|Ocelot.Errors.Middleware.ExceptionHandlerMiddleware|requestId: 0HLEDBPH0N8R6:00000004, previousRequestId: no previous request id, message: Exception caught in global error handler, exception message: The MetadataAddress or Authority must use HTTPS unless disabled for development by setting RequireHttpsMetadata=false., exception stack:    at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerPostConfigureOptions.PostConfigure(String name, JwtBearerOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Lazy`1.CreateValue()
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.<InitializeAsync>d__42.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.<GetHandlerAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.<AuthenticateAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Authentication.Middleware.AuthenticationMiddleware.<Invoke>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.RequestId.Middleware.ReRouteRequestIdMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Request.Middleware.DownstreamRequestInitialiserMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Headers.Middleware.HttpHeadersTransformationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Multiplexer.Multiplexer.<Fire>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Multiplexer.Multiplexer.<Multiplex>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware.<Invoke>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Responder.Middleware.ResponderMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Pipeline.MapWhenMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Errors.Middleware.ExceptionHandlerMiddleware.<Invoke>d__4.MoveNext() RequestId: 0HLEDBPH0N8R6:00000004, exception: System.InvalidOperationException: The MetadataAddress or Authority must use HTTPS unless disabled for development by setting RequireHttpsMetadata=false.
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerPostConfigureOptions.PostConfigure(String name, JwtBearerOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Lazy`1.CreateValue()
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.<InitializeAsync>d__42.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.<GetHandlerAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.<AuthenticateAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Authentication.Middleware.AuthenticationMiddleware.<Invoke>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.RequestId.Middleware.ReRouteRequestIdMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Request.Middleware.DownstreamRequestInitialiserMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Headers.Middleware.HttpHeadersTransformationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Multiplexer.Multiplexer.<Fire>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Multiplexer.Multiplexer.<Multiplex>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware.<Invoke>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Responder.Middleware.ResponderMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Pipeline.MapWhenMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Errors.Middleware.ExceptionHandlerMiddleware.<Invoke>d__4.MoveNext() 
+2018-06-08 10:40:45.0753||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 12.0587ms 500  
+2018-06-08 10:41:28.1595||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/servicea   
+2018-06-08 10:41:28.3166||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDBQN6R8VO:00000001, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/values 
+2018-06-08 10:41:28.3275||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDBQN6R8VO:00000001, previousRequestId: no previous request id, message: No authentication needed for /servicea 
+2018-06-08 10:41:28.3352||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDBQN6R8VO:00000001, previousRequestId: no previous request id, message: /api/values route does not require user to be authorised 
+2018-06-08 10:41:28.5146||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 367.8634ms 200 application/json; charset=utf-8 
+2018-06-08 10:41:35.8583||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/serviceb   
+2018-06-08 10:41:35.8583||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDBQN6R8VO:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/values 
+2018-06-08 10:41:35.8583||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDBQN6R8VO:00000002, previousRequestId: no previous request id, message: No authentication needed for /serviceb 
+2018-06-08 10:41:35.8583||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDBQN6R8VO:00000002, previousRequestId: no previous request id, message: /api/values route does not require user to be authorised 
+2018-06-08 10:41:35.8641||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 5.8456ms 200 application/json; charset=utf-8 
+2018-06-08 10:42:11.2468||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 10:42:11.2935||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDBQN6R8VO:00000003, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 10:42:11.2935||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDBQN6R8VO:00000003, previousRequestId: no previous request id, message: /token is an authenticated route. AuthenticationMiddleware checking if client is authenticated 
+2018-06-08 10:42:11.3519||ERROR|Ocelot.Errors.Middleware.ExceptionHandlerMiddleware|requestId: 0HLEDBQN6R8VO:00000003, previousRequestId: no previous request id, message: Exception caught in global error handler, exception message: The MetadataAddress or Authority must use HTTPS unless disabled for development by setting RequireHttpsMetadata=false., exception stack:    at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerPostConfigureOptions.PostConfigure(String name, JwtBearerOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.<InitializeAsync>d__42.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.<GetHandlerAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.<AuthenticateAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Authentication.Middleware.AuthenticationMiddleware.<Invoke>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.RequestId.Middleware.ReRouteRequestIdMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Request.Middleware.DownstreamRequestInitialiserMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Headers.Middleware.HttpHeadersTransformationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Multiplexer.Multiplexer.<Fire>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Multiplexer.Multiplexer.<Multiplex>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware.<Invoke>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Responder.Middleware.ResponderMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Pipeline.MapWhenMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Errors.Middleware.ExceptionHandlerMiddleware.<Invoke>d__4.MoveNext() RequestId: 0HLEDBQN6R8VO:00000003, exception: System.InvalidOperationException: The MetadataAddress or Authority must use HTTPS unless disabled for development by setting RequireHttpsMetadata=false.
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerPostConfigureOptions.PostConfigure(String name, JwtBearerOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.<InitializeAsync>d__42.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.<GetHandlerAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.<AuthenticateAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Authentication.Middleware.AuthenticationMiddleware.<Invoke>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.RequestId.Middleware.ReRouteRequestIdMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Request.Middleware.DownstreamRequestInitialiserMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Headers.Middleware.HttpHeadersTransformationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Multiplexer.Multiplexer.<Fire>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Multiplexer.Multiplexer.<Multiplex>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware.<Invoke>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Responder.Middleware.ResponderMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Pipeline.MapWhenMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Errors.Middleware.ExceptionHandlerMiddleware.<Invoke>d__4.MoveNext() 
+2018-06-08 10:42:11.3605||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 113.7515ms 500  
+2018-06-08 10:45:32.1157||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/api/token application/json 43 
+2018-06-08 10:45:32.1182||WARN|Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware|requestId: 0HLEDBQN6R8VR:00000001, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Unable to find downstream route for path: /api/token, verb: POST 
+2018-06-08 10:45:32.1182||WARN|Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware|requestId: 0HLEDBQN6R8VR:00000001, previousRequestId: no previous request id, message: Unable to find downstream route for path: /api/token, verb: POST 
+2018-06-08 10:45:32.1182||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDBQN6R8VR:00000001, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Unable to find downstream route for path: /api/token, verb: POST errors found in ResponderMiddleware. Setting error response for request path:/api/token, request method: POST 
+2018-06-08 10:45:32.1223||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 6.601ms 404  
+2018-06-08 10:45:37.3302||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 10:45:37.3302||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDBQN6R8VR:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 10:45:37.3302||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDBQN6R8VR:00000002, previousRequestId: no previous request id, message: /token is an authenticated route. AuthenticationMiddleware checking if client is authenticated 
+2018-06-08 10:45:37.3467||ERROR|Ocelot.Errors.Middleware.ExceptionHandlerMiddleware|requestId: 0HLEDBQN6R8VR:00000002, previousRequestId: no previous request id, message: Exception caught in global error handler, exception message: The MetadataAddress or Authority must use HTTPS unless disabled for development by setting RequireHttpsMetadata=false., exception stack:    at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerPostConfigureOptions.PostConfigure(String name, JwtBearerOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Lazy`1.CreateValue()
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.<InitializeAsync>d__42.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.<GetHandlerAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.<AuthenticateAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Authentication.Middleware.AuthenticationMiddleware.<Invoke>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.RequestId.Middleware.ReRouteRequestIdMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Request.Middleware.DownstreamRequestInitialiserMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Headers.Middleware.HttpHeadersTransformationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Multiplexer.Multiplexer.<Fire>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Multiplexer.Multiplexer.<Multiplex>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware.<Invoke>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Responder.Middleware.ResponderMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Pipeline.MapWhenMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Errors.Middleware.ExceptionHandlerMiddleware.<Invoke>d__4.MoveNext() RequestId: 0HLEDBQN6R8VR:00000002, exception: System.InvalidOperationException: The MetadataAddress or Authority must use HTTPS unless disabled for development by setting RequireHttpsMetadata=false.
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerPostConfigureOptions.PostConfigure(String name, JwtBearerOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Lazy`1.CreateValue()
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.<InitializeAsync>d__42.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.<GetHandlerAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.<AuthenticateAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Authentication.Middleware.AuthenticationMiddleware.<Invoke>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.RequestId.Middleware.ReRouteRequestIdMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Request.Middleware.DownstreamRequestInitialiserMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Headers.Middleware.HttpHeadersTransformationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Multiplexer.Multiplexer.<Fire>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Multiplexer.Multiplexer.<Multiplex>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware.<Invoke>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Responder.Middleware.ResponderMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Pipeline.MapWhenMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Errors.Middleware.ExceptionHandlerMiddleware.<Invoke>d__4.MoveNext() 
+2018-06-08 10:45:37.3467||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 17.143ms 500  
+2018-06-08 11:10:59.6008||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 11:10:59.6105||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDBQN6R8VS:00000001, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 11:10:59.6105||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDBQN6R8VS:00000001, previousRequestId: no previous request id, message: /token is an authenticated route. AuthenticationMiddleware checking if client is authenticated 
+2018-06-08 11:10:59.6418||ERROR|Ocelot.Errors.Middleware.ExceptionHandlerMiddleware|requestId: 0HLEDBQN6R8VS:00000001, previousRequestId: no previous request id, message: Exception caught in global error handler, exception message: The MetadataAddress or Authority must use HTTPS unless disabled for development by setting RequireHttpsMetadata=false., exception stack:    at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerPostConfigureOptions.PostConfigure(String name, JwtBearerOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Lazy`1.CreateValue()
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.<InitializeAsync>d__42.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.<GetHandlerAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.<AuthenticateAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Authentication.Middleware.AuthenticationMiddleware.<Invoke>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.RequestId.Middleware.ReRouteRequestIdMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Request.Middleware.DownstreamRequestInitialiserMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Headers.Middleware.HttpHeadersTransformationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Multiplexer.Multiplexer.<Fire>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Multiplexer.Multiplexer.<Multiplex>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware.<Invoke>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Responder.Middleware.ResponderMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Pipeline.MapWhenMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Errors.Middleware.ExceptionHandlerMiddleware.<Invoke>d__4.MoveNext() RequestId: 0HLEDBQN6R8VS:00000001, exception: System.InvalidOperationException: The MetadataAddress or Authority must use HTTPS unless disabled for development by setting RequireHttpsMetadata=false.
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerPostConfigureOptions.PostConfigure(String name, JwtBearerOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Lazy`1.CreateValue()
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.<InitializeAsync>d__42.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.<GetHandlerAsync>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.<AuthenticateAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Authentication.Middleware.AuthenticationMiddleware.<Invoke>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.RequestId.Middleware.ReRouteRequestIdMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Request.Middleware.DownstreamRequestInitialiserMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Headers.Middleware.HttpHeadersTransformationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Multiplexer.Multiplexer.<Fire>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Multiplexer.Multiplexer.<Multiplex>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware.<Invoke>d__5.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Responder.Middleware.ResponderMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Middleware.Pipeline.MapWhenMiddleware.<Invoke>d__3.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Errors.Middleware.ExceptionHandlerMiddleware.<Invoke>d__4.MoveNext() 
+2018-06-08 11:10:59.6418||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 42.7478ms 500  
+2018-06-08 11:28:55.5559||FATAL|Microsoft.AspNetCore.Hosting.Internal.WebHost|Application startup exception One or more errors occurred. (Scheme already exists: TestKey)
+2018-06-08 11:30:09.5935||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 11:30:09.8204||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDCLTRQGCT:00000001, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 11:30:09.8315||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:00000001, previousRequestId: no previous request id, message: /token is an authenticated route. AuthenticationMiddleware checking if client is authenticated 
+2018-06-08 11:30:09.8361||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:00000001, previousRequestId: no previous request id, message: Client has NOT been authenticated for /token and pipeline error set. Request for authenticated route /token by  was unauthenticated 
+2018-06-08 11:30:09.8361||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:00000001, previousRequestId: no previous request id, message: Request for authenticated route /token by  was unauthenticated 
+2018-06-08 11:30:09.8548||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDCLTRQGCT:00000001, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /token by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/token, request method: POST 
+2018-06-08 11:30:09.9137||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 328.847ms 401  
+2018-06-08 11:30:14.3506||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 11:30:14.3506||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDCLTRQGCT:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 11:30:14.3506||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:00000002, previousRequestId: no previous request id, message: /token is an authenticated route. AuthenticationMiddleware checking if client is authenticated 
+2018-06-08 11:30:14.3506||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:00000002, previousRequestId: no previous request id, message: Client has NOT been authenticated for /token and pipeline error set. Request for authenticated route /token by  was unauthenticated 
+2018-06-08 11:30:14.3506||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:00000002, previousRequestId: no previous request id, message: Request for authenticated route /token by  was unauthenticated 
+2018-06-08 11:30:14.3506||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDCLTRQGCT:00000002, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /token by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/token, request method: POST 
+2018-06-08 11:30:14.3529||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 2.2484ms 401  
+2018-06-08 11:30:17.7966||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 11:30:17.7972||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDCLTRQGCT:00000003, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 11:30:17.7972||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:00000003, previousRequestId: no previous request id, message: /token is an authenticated route. AuthenticationMiddleware checking if client is authenticated 
+2018-06-08 11:30:17.7972||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:00000003, previousRequestId: no previous request id, message: Client has NOT been authenticated for /token and pipeline error set. Request for authenticated route /token by  was unauthenticated 
+2018-06-08 11:30:17.7972||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:00000003, previousRequestId: no previous request id, message: Request for authenticated route /token by  was unauthenticated 
+2018-06-08 11:30:17.7972||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDCLTRQGCT:00000003, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /token by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/token, request method: POST 
+2018-06-08 11:30:17.7972||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.8308ms 401  
+2018-06-08 11:30:31.5219||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/serviceb   
+2018-06-08 11:30:31.5219||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDCLTRQGCT:00000004, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/values 
+2018-06-08 11:30:31.5219||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:00000004, previousRequestId: no previous request id, message: No authentication needed for /serviceb 
+2018-06-08 11:30:31.5344||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDCLTRQGCT:00000004, previousRequestId: no previous request id, message: /api/values route does not require user to be authorised 
+2018-06-08 11:30:31.6748||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 152.9416ms 200 application/json; charset=utf-8 
+2018-06-08 11:30:32.9754||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/serviceb   
+2018-06-08 11:30:32.9754||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDCLTRQGCT:00000005, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/values 
+2018-06-08 11:30:32.9754||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:00000005, previousRequestId: no previous request id, message: No authentication needed for /serviceb 
+2018-06-08 11:30:32.9754||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDCLTRQGCT:00000005, previousRequestId: no previous request id, message: /api/values route does not require user to be authorised 
+2018-06-08 11:30:32.9843||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 8.9741ms 200 application/json; charset=utf-8 
+2018-06-08 11:30:33.6745||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/serviceb   
+2018-06-08 11:30:33.6745||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDCLTRQGCT:00000006, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/values 
+2018-06-08 11:30:33.6745||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:00000006, previousRequestId: no previous request id, message: No authentication needed for /serviceb 
+2018-06-08 11:30:33.6745||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDCLTRQGCT:00000006, previousRequestId: no previous request id, message: /api/values route does not require user to be authorised 
+2018-06-08 11:30:33.6796||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 5.0584ms 200 application/json; charset=utf-8 
+2018-06-08 11:30:34.2651||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/serviceb   
+2018-06-08 11:30:34.2651||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDCLTRQGCT:00000007, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/values 
+2018-06-08 11:30:34.2651||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:00000007, previousRequestId: no previous request id, message: No authentication needed for /serviceb 
+2018-06-08 11:30:34.2651||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDCLTRQGCT:00000007, previousRequestId: no previous request id, message: /api/values route does not require user to be authorised 
+2018-06-08 11:30:34.2699||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 4.7741ms 200 application/json; charset=utf-8 
+2018-06-08 11:30:34.6747||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/serviceb   
+2018-06-08 11:30:34.6747||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDCLTRQGCT:00000008, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/values 
+2018-06-08 11:30:34.6747||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:00000008, previousRequestId: no previous request id, message: No authentication needed for /serviceb 
+2018-06-08 11:30:34.6747||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDCLTRQGCT:00000008, previousRequestId: no previous request id, message: /api/values route does not require user to be authorised 
+2018-06-08 11:30:34.6805||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 5.8231ms 200 application/json; charset=utf-8 
+2018-06-08 11:30:34.9779||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/serviceb   
+2018-06-08 11:30:34.9779||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDCLTRQGCT:00000009, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/values 
+2018-06-08 11:30:34.9779||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:00000009, previousRequestId: no previous request id, message: No authentication needed for /serviceb 
+2018-06-08 11:30:34.9779||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDCLTRQGCT:00000009, previousRequestId: no previous request id, message: /api/values route does not require user to be authorised 
+2018-06-08 11:30:34.9840||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 6.0825ms 200 application/json; charset=utf-8 
+2018-06-08 11:30:35.3227||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/serviceb   
+2018-06-08 11:30:35.3227||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDCLTRQGCT:0000000A, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/values 
+2018-06-08 11:30:35.3227||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:0000000A, previousRequestId: no previous request id, message: No authentication needed for /serviceb 
+2018-06-08 11:30:35.3227||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDCLTRQGCT:0000000A, previousRequestId: no previous request id, message: /api/values route does not require user to be authorised 
+2018-06-08 11:30:35.3265||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 3.8654ms 200 application/json; charset=utf-8 
+2018-06-08 11:31:15.0575||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/serviceb   
+2018-06-08 11:31:15.0575||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDCLTRQGCT:0000000B, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/values 
+2018-06-08 11:31:15.0575||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:0000000B, previousRequestId: no previous request id, message: No authentication needed for /serviceb 
+2018-06-08 11:31:15.0575||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDCLTRQGCT:0000000B, previousRequestId: no previous request id, message: /api/values route does not require user to be authorised 
+2018-06-08 11:31:15.0625||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 5.0001ms 200 application/json; charset=utf-8 
+2018-06-08 11:31:18.7409||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/servicea   
+2018-06-08 11:31:18.7409||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDCLTRQGCT:0000000C, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/values 
+2018-06-08 11:31:18.7409||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:0000000C, previousRequestId: no previous request id, message: No authentication needed for /servicea 
+2018-06-08 11:31:18.7409||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDCLTRQGCT:0000000C, previousRequestId: no previous request id, message: /api/values route does not require user to be authorised 
+2018-06-08 11:31:18.7525||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 11.6365ms 200 application/json; charset=utf-8 
+2018-06-08 11:31:21.9867||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 11:31:21.9867||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDCLTRQGCT:0000000D, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 11:31:21.9867||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:0000000D, previousRequestId: no previous request id, message: /token is an authenticated route. AuthenticationMiddleware checking if client is authenticated 
+2018-06-08 11:31:21.9867||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:0000000D, previousRequestId: no previous request id, message: Client has NOT been authenticated for /token and pipeline error set. Request for authenticated route /token by  was unauthenticated 
+2018-06-08 11:31:21.9867||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:0000000D, previousRequestId: no previous request id, message: Request for authenticated route /token by  was unauthenticated 
+2018-06-08 11:31:21.9867||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDCLTRQGCT:0000000D, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /token by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/token, request method: POST 
+2018-06-08 11:31:21.9867||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.4988ms 401  
+2018-06-08 11:31:23.0583||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 11:31:23.0583||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDCLTRQGCT:0000000E, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 11:31:23.0583||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:0000000E, previousRequestId: no previous request id, message: /token is an authenticated route. AuthenticationMiddleware checking if client is authenticated 
+2018-06-08 11:31:23.0583||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:0000000E, previousRequestId: no previous request id, message: Client has NOT been authenticated for /token and pipeline error set. Request for authenticated route /token by  was unauthenticated 
+2018-06-08 11:31:23.0583||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:0000000E, previousRequestId: no previous request id, message: Request for authenticated route /token by  was unauthenticated 
+2018-06-08 11:31:23.0583||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDCLTRQGCT:0000000E, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /token by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/token, request method: POST 
+2018-06-08 11:31:23.0583||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.525ms 401  
+2018-06-08 11:31:23.2966||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 11:31:23.2972||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDCLTRQGCT:0000000F, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 11:31:23.2972||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:0000000F, previousRequestId: no previous request id, message: /token is an authenticated route. AuthenticationMiddleware checking if client is authenticated 
+2018-06-08 11:31:23.2972||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:0000000F, previousRequestId: no previous request id, message: Client has NOT been authenticated for /token and pipeline error set. Request for authenticated route /token by  was unauthenticated 
+2018-06-08 11:31:23.2972||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCLTRQGCT:0000000F, previousRequestId: no previous request id, message: Request for authenticated route /token by  was unauthenticated 
+2018-06-08 11:31:23.2972||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDCLTRQGCT:0000000F, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /token by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/token, request method: POST 
+2018-06-08 11:31:23.2972||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.3597ms 401  
+2018-06-08 11:37:10.4142||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 11:37:10.6444||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDCPR91DHG:00000001, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 11:37:10.6552||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCPR91DHG:00000001, previousRequestId: no previous request id, message: No authentication needed for /token 
+2018-06-08 11:37:10.6632||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDCPR91DHG:00000001, previousRequestId: no previous request id, message: /api/token route does not require user to be authorised 
+2018-06-08 11:37:10.7621||WARN|Ocelot.Requester.Middleware.HttpRequesterMiddleware|requestId: 0HLEDCPR91DHG:00000001, previousRequestId: no previous request id, message: Error making http request, exception: System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.Http.CurlException: Couldn't connect to server
+   at System.Net.Http.CurlHandler.ThrowIfCURLEError(CURLcode error)
+   at System.Net.Http.CurlHandler.MultiAgent.FinishRequest(StrongToWeakReference`1 easyWrapper, CURLcode messageResult)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Net.Http.HttpClient.<FinishSendAsyncBuffered>d__58.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Requester.HttpClientHttpRequester.<GetResponse>d__4.MoveNext() 
+2018-06-08 11:37:10.7717||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDCPR91DHG:00000001, previousRequestId: no previous request id, message: Error Code: UnableToCompleteRequestError Message: Error making http request, exception: System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.Http.CurlException: Couldn't connect to server
+   at System.Net.Http.CurlHandler.ThrowIfCURLEError(CURLcode error)
+   at System.Net.Http.CurlHandler.MultiAgent.FinishRequest(StrongToWeakReference`1 easyWrapper, CURLcode messageResult)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Net.Http.HttpClient.<FinishSendAsyncBuffered>d__58.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Requester.HttpClientHttpRequester.<GetResponse>d__4.MoveNext() errors found in ResponderMiddleware. Setting error response for request path:/token, request method: POST 
+2018-06-08 11:37:10.8308||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 426.3236ms 500  
+2018-06-08 11:37:15.7725||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 11:37:15.7739||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDCPR91DHG:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 11:37:15.7739||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCPR91DHG:00000002, previousRequestId: no previous request id, message: No authentication needed for /token 
+2018-06-08 11:37:15.7739||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDCPR91DHG:00000002, previousRequestId: no previous request id, message: /api/token route does not require user to be authorised 
+2018-06-08 11:37:15.7858||WARN|Ocelot.Requester.Middleware.HttpRequesterMiddleware|requestId: 0HLEDCPR91DHG:00000002, previousRequestId: no previous request id, message: Error making http request, exception: System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.Http.CurlException: Couldn't connect to server
+   at System.Net.Http.CurlHandler.ThrowIfCURLEError(CURLcode error)
+   at System.Net.Http.CurlHandler.MultiAgent.FinishRequest(StrongToWeakReference`1 easyWrapper, CURLcode messageResult)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Net.Http.HttpClient.<FinishSendAsyncBuffered>d__58.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Requester.HttpClientHttpRequester.<GetResponse>d__4.MoveNext() 
+2018-06-08 11:37:15.7858||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDCPR91DHG:00000002, previousRequestId: no previous request id, message: Error Code: UnableToCompleteRequestError Message: Error making http request, exception: System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.Http.CurlException: Couldn't connect to server
+   at System.Net.Http.CurlHandler.ThrowIfCURLEError(CURLcode error)
+   at System.Net.Http.CurlHandler.MultiAgent.FinishRequest(StrongToWeakReference`1 easyWrapper, CURLcode messageResult)
+   --- End of inner exception stack trace ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at System.Net.Http.HttpClient.<FinishSendAsyncBuffered>d__58.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Ocelot.Requester.HttpClientHttpRequester.<GetResponse>d__4.MoveNext() errors found in ResponderMiddleware. Setting error response for request path:/token, request method: POST 
+2018-06-08 11:37:15.7890||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 16.4672ms 500  
+2018-06-08 11:37:36.1830||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 11:37:36.4109||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDCQ2UBMIL:00000001, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 11:37:36.4212||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCQ2UBMIL:00000001, previousRequestId: no previous request id, message: /token is an authenticated route. AuthenticationMiddleware checking if client is authenticated 
+2018-06-08 11:37:36.4253||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCQ2UBMIL:00000001, previousRequestId: no previous request id, message: Client has NOT been authenticated for /token and pipeline error set. Request for authenticated route /token by  was unauthenticated 
+2018-06-08 11:37:36.4253||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCQ2UBMIL:00000001, previousRequestId: no previous request id, message: Request for authenticated route /token by  was unauthenticated 
+2018-06-08 11:37:36.4377||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDCQ2UBMIL:00000001, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /token by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/token, request method: POST 
+2018-06-08 11:37:36.4966||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 325.0486ms 401  
+2018-06-08 11:40:31.7086||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/servicea   
+2018-06-08 11:40:31.7100||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDCQ2UBMIN:00000001, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/values 
+2018-06-08 11:40:31.7100||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCQ2UBMIN:00000001, previousRequestId: no previous request id, message: No authentication needed for /servicea 
+2018-06-08 11:40:31.7202||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDCQ2UBMIN:00000001, previousRequestId: no previous request id, message: /api/values route does not require user to be authorised 
+2018-06-08 11:40:31.8465||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 137.8303ms 200 application/json; charset=utf-8 
+2018-06-08 11:40:36.3394||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/serviceb   
+2018-06-08 11:40:36.3394||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDCQ2UBMIN:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/values 
+2018-06-08 11:40:36.3394||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCQ2UBMIN:00000002, previousRequestId: no previous request id, message: No authentication needed for /serviceb 
+2018-06-08 11:40:36.3394||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDCQ2UBMIN:00000002, previousRequestId: no previous request id, message: /api/values route does not require user to be authorised 
+2018-06-08 11:40:36.3461||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 6.704ms 200 application/json; charset=utf-8 
+2018-06-08 11:40:46.0106||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/api/token application/json 43 
+2018-06-08 11:40:46.0106||WARN|Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware|requestId: 0HLEDCQ2UBMIN:00000003, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Unable to find downstream route for path: /api/token, verb: POST 
+2018-06-08 11:40:46.0106||WARN|Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware|requestId: 0HLEDCQ2UBMIN:00000003, previousRequestId: no previous request id, message: Unable to find downstream route for path: /api/token, verb: POST 
+2018-06-08 11:40:46.0106||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDCQ2UBMIN:00000003, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Unable to find downstream route for path: /api/token, verb: POST errors found in ResponderMiddleware. Setting error response for request path:/api/token, request method: POST 
+2018-06-08 11:40:46.0149||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 4.234ms 404  
+2018-06-08 11:40:53.2127||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/api/token application/json 43 
+2018-06-08 11:40:53.2136||WARN|Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware|requestId: 0HLEDCQ2UBMIN:00000004, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Unable to find downstream route for path: /api/token, verb: POST 
+2018-06-08 11:40:53.2136||WARN|Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware|requestId: 0HLEDCQ2UBMIN:00000004, previousRequestId: no previous request id, message: Unable to find downstream route for path: /api/token, verb: POST 
+2018-06-08 11:40:53.2136||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDCQ2UBMIN:00000004, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Unable to find downstream route for path: /api/token, verb: POST errors found in ResponderMiddleware. Setting error response for request path:/api/token, request method: POST 
+2018-06-08 11:40:53.2136||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.499ms 404  
+2018-06-08 11:40:59.1688||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/api application/json 43 
+2018-06-08 11:40:59.1692||WARN|Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware|requestId: 0HLEDCQ2UBMIN:00000005, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Unable to find downstream route for path: /api, verb: POST 
+2018-06-08 11:40:59.1692||WARN|Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware|requestId: 0HLEDCQ2UBMIN:00000005, previousRequestId: no previous request id, message: Unable to find downstream route for path: /api, verb: POST 
+2018-06-08 11:40:59.1692||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDCQ2UBMIN:00000005, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Unable to find downstream route for path: /api, verb: POST errors found in ResponderMiddleware. Setting error response for request path:/api, request method: POST 
+2018-06-08 11:40:59.1692||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 0.9617ms 404  
+2018-06-08 11:41:02.9361||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/ application/json 43 
+2018-06-08 11:41:02.9361||WARN|Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware|requestId: 0HLEDCQ2UBMIN:00000006, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Unable to find downstream route for path: /, verb: POST 
+2018-06-08 11:41:02.9361||WARN|Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware|requestId: 0HLEDCQ2UBMIN:00000006, previousRequestId: no previous request id, message: Unable to find downstream route for path: /, verb: POST 
+2018-06-08 11:41:02.9370||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDCQ2UBMIN:00000006, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Unable to find downstream route for path: /, verb: POST errors found in ResponderMiddleware. Setting error response for request path:/, request method: POST 
+2018-06-08 11:41:02.9370||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.1544ms 404  
+2018-06-08 11:41:07.1838||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 11:41:07.1850||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDCQ2UBMIN:00000007, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 11:41:07.1850||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCQ2UBMIN:00000007, previousRequestId: no previous request id, message: /token is an authenticated route. AuthenticationMiddleware checking if client is authenticated 
+2018-06-08 11:41:07.1850||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCQ2UBMIN:00000007, previousRequestId: no previous request id, message: Client has NOT been authenticated for /token and pipeline error set. Request for authenticated route /token by  was unauthenticated 
+2018-06-08 11:41:07.1850||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCQ2UBMIN:00000007, previousRequestId: no previous request id, message: Request for authenticated route /token by  was unauthenticated 
+2018-06-08 11:41:07.1850||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDCQ2UBMIN:00000007, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /token by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/token, request method: POST 
+2018-06-08 11:41:07.1850||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 2.2171ms 401  
+2018-06-08 11:44:00.8242||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 11:44:01.0576||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDCTLJ12CF:00000001, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 11:44:01.0688||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCTLJ12CF:00000001, previousRequestId: no previous request id, message: /token is an authenticated route. AuthenticationMiddleware checking if client is authenticated 
+2018-06-08 11:44:01.0759||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCTLJ12CF:00000001, previousRequestId: no previous request id, message: Client has NOT been authenticated for /token and pipeline error set. Request for authenticated route /token by  was unauthenticated 
+2018-06-08 11:44:01.0759||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDCTLJ12CF:00000001, previousRequestId: no previous request id, message: Request for authenticated route /token by  was unauthenticated 
+2018-06-08 11:44:01.0901||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDCTLJ12CF:00000001, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /token by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/token, request method: POST 
+2018-06-08 11:44:01.1497||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 333.4028ms 401  
+2018-06-08 12:54:05.0204||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/servicea   
+2018-06-08 12:54:05.2237||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDE4QHC44H:00000001, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/values 
+2018-06-08 12:54:05.2339||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:00000001, previousRequestId: no previous request id, message: No authentication needed for /servicea 
+2018-06-08 12:54:05.2415||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDE4QHC44H:00000001, previousRequestId: no previous request id, message: /api/values route does not require user to be authorised 
+2018-06-08 12:54:05.4243||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 416.3985ms 200 application/json; charset=utf-8 
+2018-06-08 12:54:09.9104||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/serviceb   
+2018-06-08 12:54:09.9104||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDE4QHC44H:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/values 
+2018-06-08 12:54:09.9104||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:00000002, previousRequestId: no previous request id, message: No authentication needed for /serviceb 
+2018-06-08 12:54:09.9104||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDE4QHC44H:00000002, previousRequestId: no previous request id, message: /api/values route does not require user to be authorised 
+2018-06-08 12:54:09.9307||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 20.3006ms 200 application/json; charset=utf-8 
+2018-06-08 12:54:13.3985||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 12:54:13.4265||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDE4QHC44H:00000003, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 12:54:13.4265||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:00000003, previousRequestId: no previous request id, message: /token is an authenticated route. AuthenticationMiddleware checking if client is authenticated 
+2018-06-08 12:54:13.4308||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:00000003, previousRequestId: no previous request id, message: Client has NOT been authenticated for /token and pipeline error set. Request for authenticated route /token by  was unauthenticated 
+2018-06-08 12:54:13.4308||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:00000003, previousRequestId: no previous request id, message: Request for authenticated route /token by  was unauthenticated 
+2018-06-08 12:54:13.4330||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDE4QHC44H:00000003, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /token by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/token, request method: POST 
+2018-06-08 12:54:13.4406||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 42.1094ms 401  
+2018-06-08 12:54:15.0098||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 12:54:15.0098||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDE4QHC44H:00000004, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 12:54:15.0098||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:00000004, previousRequestId: no previous request id, message: /token is an authenticated route. AuthenticationMiddleware checking if client is authenticated 
+2018-06-08 12:54:15.0098||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:00000004, previousRequestId: no previous request id, message: Client has NOT been authenticated for /token and pipeline error set. Request for authenticated route /token by  was unauthenticated 
+2018-06-08 12:54:15.0098||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:00000004, previousRequestId: no previous request id, message: Request for authenticated route /token by  was unauthenticated 
+2018-06-08 12:54:15.0098||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDE4QHC44H:00000004, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /token by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/token, request method: POST 
+2018-06-08 12:54:15.0098||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.7772ms 401  
+2018-06-08 12:54:15.6309||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 12:54:15.6309||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDE4QHC44H:00000005, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 12:54:15.6309||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:00000005, previousRequestId: no previous request id, message: /token is an authenticated route. AuthenticationMiddleware checking if client is authenticated 
+2018-06-08 12:54:15.6309||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:00000005, previousRequestId: no previous request id, message: Client has NOT been authenticated for /token and pipeline error set. Request for authenticated route /token by  was unauthenticated 
+2018-06-08 12:54:15.6309||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:00000005, previousRequestId: no previous request id, message: Request for authenticated route /token by  was unauthenticated 
+2018-06-08 12:54:15.6309||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDE4QHC44H:00000005, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /token by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/token, request method: POST 
+2018-06-08 12:54:15.6309||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.4411ms 401  
+2018-06-08 12:54:15.8435||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 12:54:15.8435||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDE4QHC44H:00000006, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 12:54:15.8435||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:00000006, previousRequestId: no previous request id, message: /token is an authenticated route. AuthenticationMiddleware checking if client is authenticated 
+2018-06-08 12:54:15.8435||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:00000006, previousRequestId: no previous request id, message: Client has NOT been authenticated for /token and pipeline error set. Request for authenticated route /token by  was unauthenticated 
+2018-06-08 12:54:15.8435||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:00000006, previousRequestId: no previous request id, message: Request for authenticated route /token by  was unauthenticated 
+2018-06-08 12:54:15.8435||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDE4QHC44H:00000006, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /token by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/token, request method: POST 
+2018-06-08 12:54:15.8449||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.4493ms 401  
+2018-06-08 12:54:16.2058||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 12:54:16.2058||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDE4QHC44H:00000007, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 12:54:16.2058||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:00000007, previousRequestId: no previous request id, message: /token is an authenticated route. AuthenticationMiddleware checking if client is authenticated 
+2018-06-08 12:54:16.2058||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:00000007, previousRequestId: no previous request id, message: Client has NOT been authenticated for /token and pipeline error set. Request for authenticated route /token by  was unauthenticated 
+2018-06-08 12:54:16.2058||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:00000007, previousRequestId: no previous request id, message: Request for authenticated route /token by  was unauthenticated 
+2018-06-08 12:54:16.2058||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDE4QHC44H:00000007, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /token by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/token, request method: POST 
+2018-06-08 12:54:16.2058||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.3733ms 401  
+2018-06-08 12:54:16.5133||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 12:54:16.5133||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDE4QHC44H:00000008, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 12:54:16.5133||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:00000008, previousRequestId: no previous request id, message: /token is an authenticated route. AuthenticationMiddleware checking if client is authenticated 
+2018-06-08 12:54:16.5133||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:00000008, previousRequestId: no previous request id, message: Client has NOT been authenticated for /token and pipeline error set. Request for authenticated route /token by  was unauthenticated 
+2018-06-08 12:54:16.5133||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:00000008, previousRequestId: no previous request id, message: Request for authenticated route /token by  was unauthenticated 
+2018-06-08 12:54:16.5133||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDE4QHC44H:00000008, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /token by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/token, request method: POST 
+2018-06-08 12:54:16.5133||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.4178ms 401  
+2018-06-08 12:54:16.8571||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 12:54:16.8571||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDE4QHC44H:00000009, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 12:54:16.8571||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:00000009, previousRequestId: no previous request id, message: /token is an authenticated route. AuthenticationMiddleware checking if client is authenticated 
+2018-06-08 12:54:16.8571||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:00000009, previousRequestId: no previous request id, message: Client has NOT been authenticated for /token and pipeline error set. Request for authenticated route /token by  was unauthenticated 
+2018-06-08 12:54:16.8571||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:00000009, previousRequestId: no previous request id, message: Request for authenticated route /token by  was unauthenticated 
+2018-06-08 12:54:16.8571||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDE4QHC44H:00000009, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /token by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/token, request method: POST 
+2018-06-08 12:54:16.8571||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.5511ms 401  
+2018-06-08 12:54:17.0712||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 12:54:17.0712||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDE4QHC44H:0000000A, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 12:54:17.0712||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:0000000A, previousRequestId: no previous request id, message: /token is an authenticated route. AuthenticationMiddleware checking if client is authenticated 
+2018-06-08 12:54:17.0712||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:0000000A, previousRequestId: no previous request id, message: Client has NOT been authenticated for /token and pipeline error set. Request for authenticated route /token by  was unauthenticated 
+2018-06-08 12:54:17.0712||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE4QHC44H:0000000A, previousRequestId: no previous request id, message: Request for authenticated route /token by  was unauthenticated 
+2018-06-08 12:54:17.0712||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDE4QHC44H:0000000A, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /token by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/token, request method: POST 
+2018-06-08 12:54:17.0712||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.1399ms 401  
+2018-06-08 12:57:10.0906||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/robots.txt   
+2018-06-08 12:57:10.0906||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/administration   
+2018-06-08 12:57:10.2933||WARN|Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware|requestId: 0HLEDE6HLLH96:00000001, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Unable to find downstream route for path: /robots.txt, verb: GET 
+2018-06-08 12:57:10.2933||WARN|Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware|requestId: 0HLEDE6HLLH94:00000001, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Unable to find downstream route for path: /administration, verb: GET 
+2018-06-08 12:57:10.2982||WARN|Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware|requestId: 0HLEDE6HLLH94:00000001, previousRequestId: no previous request id, message: Unable to find downstream route for path: /administration, verb: GET 
+2018-06-08 12:57:10.2982||WARN|Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware|requestId: 0HLEDE6HLLH96:00000001, previousRequestId: no previous request id, message: Unable to find downstream route for path: /robots.txt, verb: GET 
+2018-06-08 12:57:10.3011||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDE6HLLH96:00000001, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Unable to find downstream route for path: /robots.txt, verb: GET errors found in ResponderMiddleware. Setting error response for request path:/robots.txt, request method: GET 
+2018-06-08 12:57:10.3011||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDE6HLLH94:00000001, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Unable to find downstream route for path: /administration, verb: GET errors found in ResponderMiddleware. Setting error response for request path:/administration, request method: GET 
+2018-06-08 12:57:10.3753||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 295.2594ms 404  
+2018-06-08 12:57:10.3753||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 295.2839ms 404  
+2018-06-08 12:57:20.5454||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/   
+2018-06-08 12:57:20.5454||WARN|Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware|requestId: 0HLEDE6HLLH94:00000002, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Unable to find downstream route for path: /, verb: GET 
+2018-06-08 12:57:20.5454||WARN|Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware|requestId: 0HLEDE6HLLH94:00000002, previousRequestId: no previous request id, message: Unable to find downstream route for path: /, verb: GET 
+2018-06-08 12:57:20.5454||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDE6HLLH94:00000002, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Unable to find downstream route for path: /, verb: GET errors found in ResponderMiddleware. Setting error response for request path:/, request method: GET 
+2018-06-08 12:57:20.5454||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.5973ms 404  
+2018-06-08 12:57:25.6558||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/serviceb   
+2018-06-08 12:57:25.7311||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDE6HLLH94:00000003, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/values 
+2018-06-08 12:57:25.7426||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE6HLLH94:00000003, previousRequestId: no previous request id, message: No authentication needed for /serviceb 
+2018-06-08 12:57:25.7507||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDE6HLLH94:00000003, previousRequestId: no previous request id, message: /api/values route does not require user to be authorised 
+2018-06-08 12:57:25.9143||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 258.4929ms 200 application/json; charset=utf-8 
+2018-06-08 12:57:33.7989||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/tokens   
+2018-06-08 12:57:33.7989||WARN|Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware|requestId: 0HLEDE6HLLH94:00000004, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Unable to find downstream route for path: /tokens, verb: GET 
+2018-06-08 12:57:33.7989||WARN|Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware|requestId: 0HLEDE6HLLH94:00000004, previousRequestId: no previous request id, message: Unable to find downstream route for path: /tokens, verb: GET 
+2018-06-08 12:57:33.7989||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDE6HLLH94:00000004, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Unable to find downstream route for path: /tokens, verb: GET errors found in ResponderMiddleware. Setting error response for request path:/tokens, request method: GET 
+2018-06-08 12:57:33.7989||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.011ms 404  
+2018-06-08 12:57:49.4837||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/api/tokens   
+2018-06-08 12:57:49.4837||WARN|Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware|requestId: 0HLEDE6HLLH94:00000005, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Unable to find downstream route for path: /api/tokens, verb: GET 
+2018-06-08 12:57:49.4837||WARN|Ocelot.DownstreamRouteFinder.Middleware.DownstreamRouteFinderMiddleware|requestId: 0HLEDE6HLLH94:00000005, previousRequestId: no previous request id, message: Unable to find downstream route for path: /api/tokens, verb: GET 
+2018-06-08 12:57:49.4837||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDE6HLLH94:00000005, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Unable to find downstream route for path: /api/tokens, verb: GET errors found in ResponderMiddleware. Setting error response for request path:/api/tokens, request method: GET 
+2018-06-08 12:57:49.4837||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 0.9983ms 404  
+2018-06-08 13:00:47.8853||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/servicea   
+2018-06-08 13:00:48.0884||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDE8IJA9AC:00000001, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/values 
+2018-06-08 13:00:48.0995||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE8IJA9AC:00000001, previousRequestId: no previous request id, message: No authentication needed for /servicea 
+2018-06-08 13:00:48.1070||INFO|Ocelot.Authorisation.Middleware.AuthorisationMiddleware|requestId: 0HLEDE8IJA9AC:00000001, previousRequestId: no previous request id, message: /api/values route does not require user to be authorised 
+2018-06-08 13:00:48.2976||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 423.5721ms 200 application/json; charset=utf-8 
+2018-06-08 13:00:51.3539||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/token application/json 43 
+2018-06-08 13:00:51.3982||INFO|Ocelot.RateLimit.Middleware.ClientRateLimitMiddleware|requestId: 0HLEDE8IJA9AC:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/token 
+2018-06-08 13:00:51.3982||INFO|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE8IJA9AC:00000002, previousRequestId: no previous request id, message: /token is an authenticated route. AuthenticationMiddleware checking if client is authenticated 
+2018-06-08 13:00:51.4027||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE8IJA9AC:00000002, previousRequestId: no previous request id, message: Client has NOT been authenticated for /token and pipeline error set. Request for authenticated route /token by  was unauthenticated 
+2018-06-08 13:00:51.4027||WARN|Ocelot.Authentication.Middleware.AuthenticationMiddleware|requestId: 0HLEDE8IJA9AC:00000002, previousRequestId: no previous request id, message: Request for authenticated route /token by  was unauthenticated 
+2018-06-08 13:00:51.4051||WARN|Ocelot.Responder.Middleware.ResponderMiddleware|requestId: 0HLEDE8IJA9AC:00000002, previousRequestId: no previous request id, message: Error Code: UnauthenticatedError Message: Request for authenticated route /token by  was unauthenticated errors found in ResponderMiddleware. Setting error response for request path:/token, request method: POST 
+2018-06-08 13:00:51.4135||INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 59.6066ms 401  
